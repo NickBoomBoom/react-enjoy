@@ -4,11 +4,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter} from 'react-router-dom'
 import * as serviceWorker from './serviceWorker';
+
+// Context 可以让我们无须明确地传遍每一个组件，就能将值深入传递进组件树。
+// 为当前的 theme 创建一个 context（“light”为默认值）。
+const ThemeContext = React.createContext('light');
+
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <ThemeContext.Provider value='red'>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </ThemeContext.Provider>
+ 
   </React.StrictMode>,
   document.getElementById('root')
 );
@@ -17,3 +25,7 @@ ReactDOM.render(
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+
+export {
+  ThemeContext
+}

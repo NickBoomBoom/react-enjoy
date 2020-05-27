@@ -3,9 +3,7 @@ import React from 'react';
 class AsyncListCompoents extends React.Component<any, any> {
   render() {
     const { list } = this.props
-    console.log(list)
 
-    
     return <div className='async-list-root'>
       {
         list.map((item: any) => {

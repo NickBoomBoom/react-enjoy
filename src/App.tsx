@@ -9,6 +9,8 @@ import QueryPage from './views/query'
 import HookPage from './views/hook'
 import ThisPage from './views/this'
 import LazyPage from './views/lazy'
+import ContextPage from './views/context'
+import RefsPage from './views/refs'
 import { IRouter } from './models/router.model'
 const RouterList: IRouter[] = [
   {
@@ -46,6 +48,20 @@ const RouterList: IRouter[] = [
       title:"React.lazy Suspense"
     },
     component: LazyPage
+  },
+  {
+    path: '/context',
+    meta: {
+      title:"context"
+    },
+    component: ContextPage
+  },
+  {
+    path: '/refs',
+    meta: {
+      title:"refs新版,this.refs[key]禁用"
+    },
+    component: RefsPage
   },
   {
     path: '*',
