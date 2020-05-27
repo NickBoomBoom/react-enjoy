@@ -11,3 +11,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+a {
+  text-decoration:none;
+}
+
+#root {
+  display: flex;
+  height: 100vh;
+  .slider {
+    width: 10em;
+    display: flex;
+    flex-direction: column;
+    background-color: skyblue;
+    text-align: center;
+  }
+  .main{
+    height: 100vh;
+    overflow: scroll;
+    flex: 1;
+    background-color: rgba(188, 209, 255, 0.288);
+  }
+
+}
