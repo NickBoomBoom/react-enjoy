@@ -8,6 +8,7 @@ import {
 import QueryPage from './views/query'
 import HookPage from './views/hook'
 import ThisPage from './views/this'
+import LazyPage from './views/lazy'
 import { IRouter } from './models/router.model'
 const RouterList: IRouter[] = [
   {
@@ -38,6 +39,13 @@ const RouterList: IRouter[] = [
       title:"this bind问题"
     },
     component: ThisPage
+  },
+  {
+    path: '/lazy',
+    meta: {
+      title:"React.lazy Suspense"
+    },
+    component: LazyPage
   },
   {
     path: '*',
