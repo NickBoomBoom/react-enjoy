@@ -11,6 +11,7 @@ import ThisPage from './views/this'
 import LazyPage from './views/lazy'
 import ContextPage from './views/context'
 import RefsPage from './views/refs'
+import ReduxPage from './views/redux'
 import { IRouter } from './models/router.model'
 const RouterList: IRouter[] = [
   {
@@ -62,6 +63,13 @@ const RouterList: IRouter[] = [
       title:"refs新版,this.refs[key]禁用"
     },
     component: RefsPage
+  },
+  {
+    path: '/redux',
+    meta: {
+      title:"redux"
+    },
+    component: ReduxPage
   },
   {
     path: '*',
